@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+#Actualizado a python3 por: Clun0x
+
 import sys
 import socket
 import getopt
