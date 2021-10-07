@@ -41,7 +41,7 @@ def usage():
 	print("\t\techo 'AEEAFASD' | python3 netcat.py -t 192.168.11.33 -p 123")
 	sys.exit(0)
 
-def client_sender(buffer):
+def client_sender():
 
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -209,10 +209,10 @@ def main():
 	if not listen and len(target) and port > 0:
 
 		#Si no se recibe la Standar Input enviaremos Ctrl+D para matar
-		buffer = sys.stdin.read()
+		#buffer = sys.stdin.read()
 
 		#enviar datos
-		client_sender(buffer)
+		client_sender()
 
 	#Si recibimos datos, podremos ejecutar comandos y obtener una shell con los commandos de uso
 	if listen:
